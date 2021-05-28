@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
 });
 // fire a function after doc saved to db
-userSchema.pre('save', function (next){
+userSchema.pre('save',async function (next){
     const salt = await bcrypt.genSalt();
     this.password = await bcrypt.hash(this.password, salt);
     next();
