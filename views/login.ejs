@@ -1,20 +1,20 @@
 <%- include('partials/header'); -%>
 
 <form>
-    <h2>Sign up</h2>
-    <label for="email">Email</label>
+    <h2>Log In</h2>
+    <label>Email</label>
     <input type="text" name="email" required/>
     <div class="email error"></div>
-    <label for="email">Email</label>
+    <label for="password">Password</label>
     <input type="password" name="password" required/>
     <div class="password error"></div>
-    <button>Sign Up</button>
+    <button>Log In</button>
 </form>
 <script>
- const form = document.querySelector('form');
+    const form = document.querySelector('form');
     const emailError = document.querySelector('.email.error');
     const passwordError = document.querySelector('.password.error');
-
+    
     form.addEventListener('submit', async (e) =>{
         e.preventDefault();
         //reset Errors
@@ -45,6 +45,3 @@
         }  
    });
 </script>
-   
-
-<%- include('partials/footer')-%>
